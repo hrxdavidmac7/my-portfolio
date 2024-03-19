@@ -1,0 +1,28 @@
+.footer {
+    background-color: rgb(23, 128, 233);
+    color: #fff;
+    text-align: center;
+    margin-left: 300px;
+    font-weight: bold;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.footer-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    margin-bottom: 1rem;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+}

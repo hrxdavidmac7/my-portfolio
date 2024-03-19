@@ -1,38 +1,763 @@
-.App {
-  text-align: center;
+
+body {
+  
+  margin: 0;
+  font-family: "Google Sans", "Helvetica Neue", sans-serif;
+  background-color: #676464;
+}
+.Button{
+  color: #3498db;
+  font-size: 40px;
+  background-color: #3498db;
+  border-radius: 20px;
+}
+    
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  /*===== Fuente y tipografia =====*/
+  --body-font: ''Poppins'', sans-serif;
+  font-family: "Google Sans", "Helvetica Neue", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .875rem;
   }
 }
+.bd-grid {
+  max-width: 1400px;
+  display: grid;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/*===== NAV =====*/
+
+.home {
+  position: relative;
+  row-gap: 5rem;
+  padding: 4rem 0 5rem;
+}
+
+.home__data {
+  align-self: center;
+}
+
+.home__title {
+  font-size: var(--big-font-size);
+  margin-bottom: var(--mb-5);
+}
+
+.home__title-color {
+  color: var(--first-color);
+}
+
+.home__social {
   display: flex;
   flex-direction: column;
+}
+
+.home__social-icon {
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+
+.home__social-icon:hover {
+  color: var(--first-color);
+}
+
+.home__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 260px;
+}
+
+.home__blob {
+  fill: var(--first-color);
+}
+
+.home__blob-img {
+  width: 360px;
+ 
+}
+.Button {
+ font-size: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .home {
+    row-gap: 2rem;
+  }
+  .home__img {
+    width: 200px;
+  }
+ 
+}
+
+@media screen and (min-width: 576px) {
+  .home {
+    padding: 4rem 0 2rem;
+  }
+  .home__social {
+    padding-top: 0;
+    padding-bottom: 2.5rem;
+    flex-direction: row;
+    align-self: flex-end;
+  }
+  .home__social-icon {
+    margin-bottom: 0;
+    margin-right: var(--mb-4);
+  }
+  .home__img {
+    width: 300px;
+    bottom: 25%;
+  }
+  
+  .contact__container {
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  .section-title {
+    margin-bottom: var(--mb-6);
+  }
+  .section-title::after {
+    width: 80px;
+    top: 3rem;
+  }
+  
+  .home {
+    padding: 8rem 0 2rem;
+  }
+  .home__img {
+    width: 400px;
+    bottom: 10%;
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home {
+    padding: 10rem 0 2rem;
+  }
+  .home__img {
+    width: 450px;
+  }
+}
+
+
+
+
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+
+.apple-nav {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+  padding: 15px 20px;
+}
+@media (max-width:450px) {
+  .apple-nav{
+    max-height: 70px;
+  }
+  
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+     text-decoration: none;
+     font-size: 30px;
+     color: #333;
+    font-weight: bold;
+    font-family: "Google Sans", Roboto, Arial, sans-serif; /* Applied font-family */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ... (Previous styles remain unchanged) */
+
+/* Updated styles for the header navigation */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-family: "Google Sans", Roboto, Arial, sans-serif; /* Applied font-family */
+}
+
+/* ... (Previous styles remain unchanged) */
+
+
+/* Add more styles for responsiveness and Apple-like design as needed */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    
+   
+    
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    width: 100%;
+    transition: 0.2s; /* Added smooth transition */
+}
+
+.nav-item:hover {
+    font-size: 1.1em; /* Increase font size on hover */
+    background-color: #f1f1f1;
+    font-weight: 500;
+}
+
+
+
+.nav-item span {
+    color: rgb(9, 9, 9);
+    margin-left: 35px; /* Added margin from the left for text */
+}
+
+.social-heading {
+    margin: 15px 0 10px 15px;
+    font-weight: 600;
+    color: black;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    width: 100%;
+    transition: 0.3s; /* Added smooth transition */
+}
+
+.social-link:hover {
+    font-size: 1.1em; /* Increase font size on hover */
+    background-color: #f1f1f1;
+    font-weight:500;
+}
+
+
+
+.social-link span {
+    color: black;
+    margin-left: 35px; /* Added margin from the left for text */
+}
+
+/* To fill the whole card */
+.nav:last-child {
+    flex-grow: 1;
+}
+
+
+
+
+/* Add these styles for the updated hamburger menu */
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 2px; /* Make the line thinner */
+  background-color: #666; /* Light black color */
+  margin: 6px 0;
+  transition: 0.4s; /* Add a smooth transition effect */
+}
+
+.hamburger-menu.cross span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.cross span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.cross span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 1200px) {
+  .left-section {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hamburger-menu {
+    display: block;
+  }
+  
+
+  .hamburger-menu.cross span {
+    background-color: #666; /* White color for cross lines */
   }
 }
+
+
+
+  
+  /* Add more styles for responsiveness as needed */
+  /* fro right section*/
+  /* Add these styles for the card in the right section */
+.right-section{
+  margin-left: 20%;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 2px solid grey;
+}
+@media (max-width: 1200px) {
+  .right-section{
+    margin-left: 0px;
+    width: 100%;
+    
+  }
+}
+/*for intro card csssssss*/
+.intro-container {
+  font-family: "Google Sans", "Helvetica Neue", sans-serif;
+  display: flex; /* Use flexbox layout */
+  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  margin-top: 20px;
+  margin-left: 20px;
+  min-height: 610px;
+ 
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.intro-container-card {
+  display: flex; /* Use flexbox layout */
+  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 10px 10px 10px;
+  height: auto;
+}
+
+.intro-card {
+  border: 2px solid #ddd;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+  height: auto;
+  border-radius: 8px;
+  flex: 1; /* Allow flex item to grow to fill available space */
+}
+
+.intro-profile-photoo {
+  margin: 20px 0 20px 0;
+  padding: 12px;
+  border: 2px solid #ddd;
+  height: fit-content;
+  border-radius: 8px;
+  flex: 1; /* Allow flex item to grow to fill available space */
+}
+
+
+
+
+   .gradient-text {
+     background-attachment: scroll;
+     background-clip: text;
+     background-color: rgba(0, 0, 0, 0);
+     background-image: linear-gradient(74deg, rgb(66, 133, 244) 0px, rgb(155, 114, 203) 9%, rgb(217, 101, 112) 20%, rgb(217, 101, 112) 24%, rgb(155, 114, 203) 35%, rgb(66, 133, 244) 44%, rgb(155, 114, 203) 50%, rgb(217, 101, 112) 56%, rgb(255, 255, 255) 75%, rgb(255, 255, 255) 100%);
+     background-origin: padding-box;
+     background-position-x: 0%;
+     background-position-y: 0%;
+     background-repeat: repeat;
+     background-size: 400% 100%;
+     color: rgba(0, 0, 0, 0);
+     font-size: 8.5vh;
+     font-weight: 600;
+     height: auto;
+     
+     line-height: 64px;
+     position: relative;
+     width: auto;
+     -webkit-font-smoothing: antialiased;
+     -webkit-text-fill-color: rgba(0, 0, 0, 0);
+   }
+   .sub-text {
+    color: rgb(196, 199, 197) !important;
+    font-family: "Google Sans", "Helvetica Neue", sans-serif;
+    font-size: 8.5vh;
+    font-weight: 600;
+    letter-spacing: -1.68px;
+    line-height: 64px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+   @media (max-width: 1070px)  {
+    .gradient-text{
+      font-size: 4.5vh;
+    }
+    .sub-text{
+      font-size: 4.5vh;
+    }
+    
+   }
+  @media (min-width:1025px) {
+    .gradient-text{
+      font-size: 8.5vh;
+    }
+    .sub-text{
+      font-size: 8.5vh;
+    }
+    
+  }
+  
+ 
+
+   .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center; /* Adjusted object position to crop from the top */
+      
+      box-shadow: 2 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-container {
+      font-family: "Google Sans", "Helvetica Neue", sans-serif;
+      display: flex; /* Use flexbox layout */
+      flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+      margin-left: 20px;
+      
+      background-color: #f4f4f4;
+      border: 2px solid #424141;
+      border-radius: 8px;
+    }
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #000; /* Black border for a more appealing UI */
+  border-radius: 10px;
+}
+
+/* Add these styles for the updated card in the right section */
+.profile-photo-container {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Add more styles as needed */
+.scrolling-text-container {
+    overflow: hidden;
+    height: 10vh;
+}
+
+.scrolling-text {
+    display: flex;
+    flex-direction: column;
+    animation: scroll 8s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.slide {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size:8.5vh;
+    font-weight: 700;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 109.6px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+
+.build-text {
+    color: rgb(26, 115, 232);
+    transition: transform 3s ease-in-out; /* Adjust the duration for consistency */
+}
+
+.create-text {
+    color: rgb(30, 142, 62);
+    transition: transform 3s ease-in-out;
+}
+
+.design-text {
+    color: rgb(249, 171, 0);
+    transition: transform 3s ease-in-out;
+}
+
+.code-text {
+    color: rgb(217, 48, 37);
+    transition: transform 3s ease-in-out;
+    
+}
+
+.slide:first-child {
+    transform: translateY(0);
+}
+
+@keyframes scroll {
+    0%, 20% {
+        transform: translateY(0);
+    }
+    25%, 45% {
+        transform: translateY(-109.6px);
+    }
+    50%, 70% {
+        transform: translateY(-219.2px);
+    }
+    75%, 95% {
+        transform: translateY(-328.8px);
+    }
+    100% {
+        transform: translateY(-438.4px);
+    }
+}
+
+
+/* Add more styles as needed */
+/* Updated styles for the card container and card */
+/* New section for cards */
+.project-section-heading{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+.projects-heading {
+      background-color: #f1f1f1; /* Simple grey background color */
+      color: #333; /* Dark text color */
+      padding: 10px;
+      text-align: center;
+      font-size: 36px; /* Adjusted font size */
+      font-weight: 600;
+      border-radius: 8px;
+      border: 2px solid #999; /* Dark grey border color */
+      width: auto; /* Adjusted to fit the content width */
+      margin-left: 14px;
+      margin-bottom: 20px;
+      
+    }
+    
+
+.project-image {
+  width: 100%;
+  height: 150px; /* Adjust as needed */
+  background-size: cover;
+  background-position:center; /* Adjust to position the image as desired */
+ 
+}
+
+
+
+   
+ /*card for skill headinf dsfgsdfg*/
+
+ .skill-heading-container {
+        width: 100%; /* Adjusted width as per your requirement */
+        display: grid;
+        
+        
+    }
+    .skill-heading {
+      background-color: #f1f1f1; /* Simple grey background color */
+      color: #333; /* Dark text color */
+      padding: 10px;
+      text-align: center;
+      font-size: 36px; /* Adjusted font size */
+      font-weight: 600;
+      border-radius: 8px;
+      border: 2px solid #999; /* Dark grey border color */
+      width: auto; /* Adjusted to fit the content width */
+      margin-left: 14px;
+      margin-bottom: 20px;
+      
+    }
+    .ps {
+        margin-bottom: 100px;
+        display: flex;
+        gap: 20px;
+        overflow-x:initial;
+        padding: 15px;
+        box-sizing: border-box
+    }
+    .f1 {
+        flex: 1
+    }
+    .flx {
+        display: flex;
+    }
+    .flx-col {
+        flex-direction: column;
+    }
+    .g4 {
+        gap: 1rem;
+    }
+    .bg-cp {
+      background-color: #fbf9f9;
+      border: 1px solid black;
+    }
+    .p4 {
+        padding: 1rem;
+    }
+    .rd-md {
+        border-radius: .375rem
+    }
+    .shdw {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .1)
+    }
+    .tp {
+        color: #333;
+    }
+    .fm {
+        font-weight: 500;
+    }
+    .tl {
+        font-size: 1.125rem;
+    }
+    .tw {
+        letter-spacing: .05em;
+    }
+    .flx-wrap {
+        flex-wrap: wrap;
+    }
+    .g2 {
+        gap: .5rem
+    }
+    .bg-b {
+        background-color: #fff;
+    }
+    .txs {
+        font-size: .75rem;
+    }
+    .p2 {
+        padding: .5rem;
+    }
+    .bd {
+        border: 1px solid #000;
+    }
+    .bdb5 {
+        border-color: #3498db;
+    }
+    .bdy5 {
+        border-color: #f39c12;
+    }
+    .bdb {
+        border-color: #000;
+    }
+    .bde2{
+      border-color: rgb(117, 5, 197);
+    }
+    
+    .footer{
+      margin: 80px 0 50px 0;
+    }
+
+    /* Styles for the contact section */
+    .contact {
+      text-align: center;
+      padding: 40px 0;
+  }
+
+  .contact__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .contact__form {
+      width: 100%;
+      max-width: 400px;
+      border: 2px solid var(--text-color);
+      padding: 20px;
+      border-radius: 8px;
+  }
+
+  .contact__input {
+      width: 90%;
+      font-size: var(--font-size);
+      font-weight: bold;
+      padding: 1rem;
+      border-radius: .5rem;
+      border: 1.5px solid gray;
+      outline: none;
+      margin-bottom: 1rem;
+  }
+
+  .contact__button {
+      display: block;
+      border: none;
+      outline: none;
+      font-size: var(--font-size);
+      cursor: pointer;
+      margin-left: auto;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+  }
