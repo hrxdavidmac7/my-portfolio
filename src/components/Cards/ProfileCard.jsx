@@ -5,18 +5,18 @@ import { createTheme } from '@mui/material/styles';
 const ProfileCard = () => {
   return (
     <Container  sx={{ border: 2, marginBottom:'30px', marginTop:'30px' }}>
-      <Box class="profile-card">
-        <div class="profile-photo-container">
-          <img src="/images/flaviu.jpg" alt="Your" class="profile-photo"/>
+      <Box className="profile-card">
+        <div className="profile-photo-container">
+          <img src="/images/flaviu.jpg" alt="Your" className="profile-photo"/>
         </div>
         
         <Container class="scrolling-text-container">
-          <div class="scrolling-text">
-            <div class="slide build-text">Coder</div>
-            <div class="slide create-text">Developer</div>
-            <div class="slide design-text">Hacker</div>
-            <div class="slide code-text">Creater</div>
-            <div class="slide build-text">Coder</div> 
+          <div className="scrolling-text">
+            <div className="slide build-text">Coder</div>
+            <div className="slide create-text">Developer</div>
+            <div className="slide design-text">Hacker</div>
+            <div className="slide code-text">Creater</div>
+            <div className="slide build-text">Coder</div> 
           </div>
         </Container>
         </Box>

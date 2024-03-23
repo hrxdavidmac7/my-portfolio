@@ -5,7 +5,7 @@ const SkillsSection = () => {
   return (
     <Container sx={{  marginBottom:'60px', marginTop:'30px' }}>
       <Typography sx={{marginTop:'50px', marginBottom:"50px"}} variant="h4" align="center" gutterBottom className="skill-heading">
-        Skills
+        What I know
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={3} >

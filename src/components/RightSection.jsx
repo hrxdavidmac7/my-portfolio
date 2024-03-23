@@ -13,25 +13,32 @@ import EditIcon from '@mui/icons-material/Edit';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import Contact from './Cards/contact';
+import PortfolioCard from './Cards/trendingcard';
+import HireMePage from './Cards/hireme';
 
-const RightSection = () => {
+
+function RightSection() {
   return (
-  <Container class="right-section">
-    <IntroCard/>
-    <ProjectsSection />
-    <SkillsSection />
-    <ProfileCard />
-    <Contact/>
-    <Footer/>
-    <Mainfooter/>
-   
-    
-    
-    
-        
-          
+    <Container class="right-section">
+
+      <IntroCard />
       
-  </Container>
+      <ProjectsSection />
+      <SkillsSection />
+     
+
+      <Contact />
+      
+      <Mainfooter />
+
+
+
+
+
+
+
+
+    </Container>
   );
 }
 

@@ -1,91 +1,64 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
-import { Input, TextField, Button, Container } from '@mui/material';
-import { useState } from 'react';
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+import { Container } from '@mui/material';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import { FacebookOutlined, Instagram } from '@mui/icons-material';
 
+const StyledLink = styled('a')({
+  boxSizing: 'border-box',
+  color: 'rgb(66, 63, 63)',
+  cursor: 'pointer',
+  display: 'flex', // Change display to flex
+  alignItems: 'center', // Align items vertically
+  fontFamily: '"Google Sans", arial, sans-serif',
+  fontSize: '11px',
+  fontWeight: 400,
+  textDecoration: 'none',
+});
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+const FooterContainer = styled('footer')({
+  borderTop: '1px solid rgba(0, 0, 0, 0.12)',
+  padding: '12px 8px',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  flexWrap: 'wrap', // Allow items to wrap to a new line
+});
 
+const LinksContainer = styled('div')({
+  display: 'flex',
+  gap: '16px',
+});
 
-export default function () {
+const Footer = () => {
   return (
-    <Container sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid  xs={12} md={5} lg={4}>
-          <Item><TextField fullWidth 
-          id="outlined-textarea"
-          label="Email Subscription"
-          placeholder="Enter Your Email"
-          required></TextField></Item><br/>
-          <Button variant='contained' > Submit</Button>
-        </Grid>
-        <Grid container xs={12} md={7} lg={8} spacing={4}>
-          <Grid xs={6} lg={6}>
-            <Item>
-              <Box
-                id="category-a"
-                sx={{ fontSize: '12px', textTransform: 'uppercase' }}
-              >
-                Category A
-              </Box>
-              <Box component="ul" aria-labelledby="category-a" sx={{ pl: 2 }}>
-                <li>Home</li>
-                <li>Dashboard</li>
-                <li>Resume</li>
-              </Box>
-            </Item>
-          </Grid>
-          <Grid xs={6} lg={6}>
-            <Item>
-              <Box
-                id="category-b"
-                sx={{ fontSize: '12px', textTransform: 'uppercase' }}
-              >
-               Quick Links
-              </Box>
-              <Box component="ul" aria-labelledby="category-b" sx={{ pl: 2}}>
-                <li>Trending</li>
-                <li>Our Company</li>
-                <li>Hrxdavidmac</li>
-              </Box>
-            </Item>
-          </Grid>
+    <Box>
+      <Container>
+        {/* Add content here if needed */}
+      </Container>
+      <FooterContainer>
+        <Box display="flex" gap={2}>
+          <StyledLink href='google.com'><TwitterIcon /></StyledLink>
+          <StyledLink href='google.com'><Instagram /></StyledLink>
+          <StyledLink href='google.com'> <FacebookOutlined /></StyledLink>
+          <StyledLink href='google.com'><YouTubeIcon />  </StyledLink>
           
-          
-        </Grid>
-        <Grid
-          xs={12}
-          container
-          justifyContent="space-between"
-          alignItems="center"
-          flexDirection={{ xs: 'column', sm: 'row' }}
-          sx={{ fontSize: '12px' }}
-        >
-          <Grid sx={{ order: { xs: 2, sm: 1 } }}>
-            <Item>© Anubhav Copyright</Item>
-          </Grid>
-          <Grid container columnSpacing={1} sx={{ order: { xs: 1, sm: 2 } }}>
-            <Grid>
-              <Item>Instagram</Item>
-            </Grid>
-            <Grid>
-              <Item>Facebook</Item>
-            </Grid>
-            <Grid>
-              <Item>Twitter</Item>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Container>
+        </Box>
+
+        <Divider orientation="vertical" flexItem />
+
+        <LinksContainer>
+          <StyledLink href="#">Privacy</StyledLink>
+          <StyledLink href="#">Terms of Service</StyledLink>
+          <StyledLink href="#">Contact</StyledLink>
+        </LinksContainer>
+      </FooterContainer>
+    </Box>
   );
-}
+};
+
+export default Footer;

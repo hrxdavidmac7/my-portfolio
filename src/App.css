@@ -216,6 +216,12 @@ header {
     font-weight: bold;
     font-family: "Google Sans", Roboto, Arial, sans-serif; /* Applied font-family */
 }
+.text-intro {
+  text-decoration: none;
+  color: #333;
+ font-size: 20px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;/* Applied font-family */
+}
 
 /* ... (Previous styles remain unchanged) */
 
@@ -225,6 +231,14 @@ header {
     display: flex;
     gap: 20px;
 }
+@media (max-width : 490px) {
+  .nav-list{
+    display: none;
+  }
+  
+}
+  
+
 
 .nav-list li a {
     text-decoration: none;

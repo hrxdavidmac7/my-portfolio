@@ -17,8 +17,6 @@ function App() {
       <div className="portfolio-content">
         <LeftSection />
         <RightSection/>
-        
-         
       </div>
       
     </div>
