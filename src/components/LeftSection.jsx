@@ -21,18 +21,18 @@ const drawerWidth = 280;
 
 export default function PermanentDrawerLeft() {
   const menuItems = [
-    { text: 'Home', icon: <HomeIcon /> },
-    { text: 'Trending', icon: <TrendingUpIcon /> },
-    { text: 'Snippet', icon: <CodeIcon /> },
-    { text: 'Video', icon: <VideoLibraryIcon /> }
+    { text: 'Home', icon: <HomeIcon />, url:'https://www.google.com' },
+    { text: 'Trending', icon: <TrendingUpIcon />, url:'https://www.google.com'  },
+    { text: 'Snippet', icon: <CodeIcon />, url:'https://www.google.com'  },
+    { text: 'Video', icon: <VideoLibraryIcon />, url:'https://www.google.com'  }
   ];
 
   const socialItems = [
-    { text: 'LinkedIn', icon: <LinkedInIcon /> },
-    { text: 'GitHub', icon: <GitHubIcon /> },
-    { text: 'YouTube', icon: <YouTubeIcon /> },
-    { text: 'LeetCode', icon: <CodeIcon /> },
-    { text: 'Telegram', icon: <TelegramIcon /> }
+    { text: 'LinkedIn', icon: <LinkedInIcon />, url:'https://www.linkedin.com/iamanubhav7/'  },
+    { text: 'GitHub', icon: <GitHubIcon /> ,url:'https://github.com/hrxdavidmac7' },
+    { text: 'YouTube', icon: <YouTubeIcon />, url:'https://www.google.com'  },
+    { text: 'LeetCode', icon: <CodeIcon /> , url:'https://www.google.com' },
+    { text: 'Telegram', icon: <TelegramIcon />,url:'https://www.google.com'  }
   ];
 
   return (
@@ -62,6 +62,7 @@ export default function PermanentDrawerLeft() {
               {menuItems.map((item, index) => (
                 <React.Fragment key={item.text}>
                   <ListItem disablePadding>
+                  <a href={item.url} style={{ textDecoration: 'none', color: 'inherit', width:'100%' }}>
                     <ListItemButton>
                       <ListItemIcon>
                         {item.icon}
@@ -69,6 +70,7 @@ export default function PermanentDrawerLeft() {
                       <Divider orientation="vertical" flexItem sx={{ width: '1px', marginRight: '5px' }} />
                       <ListItemText primary={item.text} sx={{ marginLeft: '10px' }} />
                     </ListItemButton>
+                    </a>
                   </ListItem>
                 </React.Fragment>
               ))}
@@ -81,6 +83,7 @@ export default function PermanentDrawerLeft() {
               {socialItems.map((item, index) => (
                 <React.Fragment key={item.text}>
                   <ListItem disablePadding>
+                  <a href={item.url} style={{ textDecoration: 'none', color: 'inherit', width:'100%' }}>
                     <ListItemButton>
                       <ListItemIcon>
                         {item.icon}
@@ -88,6 +91,7 @@ export default function PermanentDrawerLeft() {
                       <Divider orientation="vertical" flexItem sx={{ width: '1px',  marginRight: '5px' }} />
                       <ListItemText primary={item.text} sx={{ marginLeft: '10px' }} />
                     </ListItemButton>
+                    </a>
                   </ListItem>
                 </React.Fragment>
               ))}
