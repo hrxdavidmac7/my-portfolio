@@ -33,12 +33,13 @@ function CustomTabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
   );
 }
+
 
 CustomTabPanel.propTypes = {
   children: PropTypes.node,
@@ -69,18 +70,17 @@ export default function BasicTabs() {
           <Tab label="Certificates" {...a11yProps(2)} style={{fontSize:'18px', fontWeight:700}}  color='red'/>
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0} >
-        <Typography>
-          <div style={{ textAlign: 'left', color: "#404040" }} className='text-intro'>
-            <p>Hi, I'm Anubhav.</p>
-            <p>I'm a recent graduated fresher.</p>
-            <p>I graduated with my <strong style={{ color: "#525252" }}>Bachelor of Technology in Electronics and Communication</strong> from Dr. A.P.J. Abdul Kalam Technical University in Spring, 2024.</p>
-            <p>I love working on exciting products and value learning and growing with people, teams, and technologies. As an intellectually curious, competent, and motivated professional, I am on a lookout for new and exciting opportunities.</p>
-            <p>I’ve written code in a high-paced and challenging environment with an emphasis on using best practices to develop high-quality software that meets project requirements, budget, and schedule. As a keen learner, I possess new and innovative ideas and look forward to working in a great team environment, experiencing and adapting to new technologies and advancements on the go.</p>
-          </div>
-        </Typography>
-        <Divider/>
-      </CustomTabPanel>
+      <CustomTabPanel value={value} index={0}>
+  <div style={{ textAlign: 'left', color: "#404040" }} className='text-intro'>
+    <div style={{ marginBottom: '10px' }}>Hi, I'm Anubhav.</div>
+    <div style={{ marginBottom: '10px' }}>I'm a recent graduated fresher.</div>
+    <div style={{ marginBottom: '10px' }}>I graduated with my <strong style={{ color: "#525252" }}>Bachelor of Technology in Electronics and Communication</strong> from Dr. A.P.J. Abdul Kalam Technical University in Spring, 2024.</div>
+    <div style={{ marginBottom: '10px' }}>I love working on exciting products and value learning and growing with people, teams, and technologies. As an intellectually curious, competent, and motivated professional, I am on a lookout for new and exciting opportunities.</div>
+    <div>I’ve written code in a high-paced and challenging environment with an emphasis on using best practices to develop high-quality software that meets project requirements, budget, and schedule. As a keen learner, I possess new and innovative ideas and look forward to working in a great team environment, experiencing and adapting to new technologies and advancements on the go.</div>
+  </div>
+  <Divider />
+</CustomTabPanel>
+
       <CustomTabPanel value={value} index={1}>
         <Timeline align="left">
           <TimelineItem>

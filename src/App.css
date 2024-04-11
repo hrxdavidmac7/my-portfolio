@@ -214,18 +214,16 @@ header {
      font-size: 30px;
      color: #333;
     font-weight: bold;
-    font-family: "Google Sans", Roboto, Arial, sans-serif; /* Applied font-family */
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
 }
 .text-intro {
   text-decoration: none;
   color: #333;
  font-size: 20px;
-  font-family: "Google Sans", Roboto, Arial, sans-serif;/* Applied font-family */
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
 }
 
-/* ... (Previous styles remain unchanged) */
 
-/* Updated styles for the header navigation */
 .nav-list {
     list-style-type: none;
     display: flex;
@@ -244,13 +242,10 @@ header {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    font-family: "Google Sans", Roboto, Arial, sans-serif; /* Applied font-family */
+    font-family: "Google Sans", Roboto, Arial, sans-serif; 
 }
 
-/* ... (Previous styles remain unchanged) */
 
-
-/* Add more styles for responsiveness and Apple-like design as needed */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -274,11 +269,11 @@ body {
     align-items: center;
     padding: 15px 0 15px 0;
     width: 100%;
-    transition: 0.2s; /* Added smooth transition */
+    transition: 0.2s; 
 }
 
 .nav-item:hover {
-    font-size: 1.1em; /* Increase font size on hover */
+    font-size: 1.1em; 
     background-color: #f1f1f1;
     font-weight: 500;
 }
@@ -287,7 +282,7 @@ body {
 
 .nav-item span {
     color: rgb(9, 9, 9);
-    margin-left: 35px; /* Added margin from the left for text */
+    margin-left: 35px; 
 }
 
 .social-heading {
@@ -301,11 +296,11 @@ body {
     align-items: center;
     padding: 15px 0 15px 0;
     width: 100%;
-    transition: 0.3s; /* Added smooth transition */
+    transition: 0.3s; 
 }
 
 .social-link:hover {
-    font-size: 1.1em; /* Increase font size on hover */
+    font-size: 1.1em; 
     background-color: #f1f1f1;
     font-weight:500;
 }
@@ -314,10 +309,10 @@ body {
 
 .social-link span {
     color: black;
-    margin-left: 35px; /* Added margin from the left for text */
+    margin-left: 35px; 
 }
 
-/* To fill the whole card */
+
 .nav:last-child {
     flex-grow: 1;
 }
@@ -325,14 +320,14 @@ body {
 
 
 
-/* Add these styles for the updated hamburger menu */
+
 .hamburger-menu span {
   display: block;
   width: 25px;
-  height: 2px; /* Make the line thinner */
-  background-color: #666; /* Light black color */
+  height: 2px; 
+  background-color: #666; 
   margin: 6px 0;
-  transition: 0.4s; /* Add a smooth transition effect */
+  transition: 0.4s; 
 }
 
 .hamburger-menu.cross span:nth-child(1) {
@@ -347,7 +342,7 @@ body {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Media query for responsiveness */
+
 @media (max-width: 1200px) {
   .left-section {
     display: none;
@@ -359,21 +354,19 @@ body {
   
 
   .hamburger-menu.cross span {
-    background-color: #666; /* White color for cross lines */
+    background-color: #666; 
   }
 }
 
 
 
   
-  /* Add more styles for responsiveness as needed */
-  /* fro right section*/
-  /* Add these styles for the card in the right section */
+
 .right-section{
   margin-left: 20%;
   margin-bottom: 10px;
   padding: 20px;
-  border: 2px solid grey;
+  
 }
 @media (max-width: 1200px) {
   .right-section{
@@ -382,11 +375,11 @@ body {
     
   }
 }
-/*for intro card csssssss*/
+
 .intro-container {
   font-family: "Google Sans", "Helvetica Neue", sans-serif;
-  display: flex; /* Use flexbox layout */
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  display: flex; 
+  flex-wrap: wrap; 
   margin-top: 20px;
   margin-left: 20px;
   min-height: 610px;
@@ -396,8 +389,8 @@ body {
 }
 
 .intro-container-card {
-  display: flex; /* Use flexbox layout */
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  display: flex; 
+  flex-wrap: wrap; 
   border: 2px solid #ddd;
   border-radius: 8px;
   margin: 20px 10px 10px 10px;
@@ -410,7 +403,7 @@ body {
   padding: 10px;
   height: auto;
   border-radius: 8px;
-  flex: 1; /* Allow flex item to grow to fill available space */
+  flex: 1; 
 }
 
 .intro-profile-photoo {
@@ -419,7 +412,7 @@ body {
   border: 2px solid #ddd;
   height: fit-content;
   border-radius: 8px;
-  flex: 1; /* Allow flex item to grow to fill available space */
+  flex: 1; 
 }
 
 
@@ -482,15 +475,15 @@ body {
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center; /* Adjusted object position to crop from the top */
+      object-position: center;
       
       box-shadow: 2 4px 16px rgba(0, 0, 0, 0.2);
     }
 
     .card-container {
       font-family: "Google Sans", "Helvetica Neue", sans-serif;
-      display: flex; /* Use flexbox layout */
-      flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+      display: flex; 
+      flex-wrap: wrap; 
       margin-left: 20px;
       
       background-color: #f4f4f4;
@@ -504,11 +497,11 @@ body {
   justify-content: space-between;
   margin: 20px;
   padding: 20px;
-  border: 2px solid #000; /* Black border for a more appealing UI */
+  border: 2px solid #000; 
   border-radius: 10px;
 }
 
-/* Add these styles for the updated card in the right section */
+
 .profile-photo-container {
   width: 120px;
   height: 120px;
@@ -525,7 +518,7 @@ body {
 
 
 
-/* Add more styles as needed */
+
 .scrolling-text-container {
     overflow: hidden;
     height: 10vh;
@@ -553,7 +546,7 @@ body {
 
 .build-text {
     color: rgb(26, 115, 232);
-    transition: transform 3s ease-in-out; /* Adjust the duration for consistency */
+    transition: transform 3s ease-in-out;
 }
 
 .create-text {
@@ -595,24 +588,22 @@ body {
 }
 
 
-/* Add more styles as needed */
-/* Updated styles for the card container and card */
-/* New section for cards */
+
 .project-section-heading{
   margin-top: 20px;
   margin-bottom: 20px;
   
 }
 .projects-heading {
-      background-color: #f1f1f1; /* Simple grey background color */
-      color: #333; /* Dark text color */
+      background-color: #f1f1f1;
+      color: #333; 
       padding: 10px;
       text-align: center;
-      font-size: 36px; /* Adjusted font size */
+      font-size: 36px;
       font-weight: 600;
       border-radius: 8px;
-      border: 2px solid #999; /* Dark grey border color */
-      width: auto; /* Adjusted to fit the content width */
+      border: 2px solid #999; 
+      width: auto; 
       margin-left: 14px;
       margin-bottom: 20px;
       
@@ -621,33 +612,33 @@ body {
 
 .project-image {
   width: 100%;
-  height: 150px; /* Adjust as needed */
+  height: 150px;
   background-size: cover;
-  background-position:center; /* Adjust to position the image as desired */
+  background-position:center; 
  
 }
 
 
 
    
- /*card for skill headinf dsfgsdfg*/
+ 
 
  .skill-heading-container {
-        width: 100%; /* Adjusted width as per your requirement */
+        width: 100%;
         display: grid;
         
         
     }
     .skill-heading {
-      background-color: #f1f1f1; /* Simple grey background color */
-      color: #333; /* Dark text color */
+      background-color: #f1f1f1; 
+      color: #333;
       padding: 10px;
       text-align: center;
-      font-size: 36px; /* Adjusted font size */
+      font-size: 36px; 
       font-weight: 600;
       border-radius: 8px;
-      border: 2px solid #999; /* Dark grey border color */
-      width: auto; /* Adjusted to fit the content width */
+      border: 2px solid #999; 
+      width: auto; 
       margin-left: 14px;
       margin-bottom: 20px;
       
@@ -673,8 +664,8 @@ body {
         gap: 1rem;
     }
     .bg-cp {
-      background-color: #fbf9f9;
-      border: 1px solid black;
+      background-color: #ffffff;
+      border: 1px solid rgb(145, 145, 145);
     }
     .p4 {
         padding: 1rem;
@@ -701,7 +692,8 @@ body {
         flex-wrap: wrap;
     }
     .g2 {
-        gap: .5rem
+        gap: .5rem;
+        
     }
     .bg-b {
         background-color: #fff;

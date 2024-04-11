@@ -6,7 +6,7 @@ import IntroCard from './components/Cards/IntroCard';
 import ProjectsSection from './components/ProjectsSection';
 import SkillsSection from './components/SkillsSection';
 import ProfileCard from './components/Cards/ProfileCard';
-import Footer from './components/Footer/Footer';
+
 import './App.css';
 
 

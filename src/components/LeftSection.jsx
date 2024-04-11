@@ -16,6 +16,16 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import CodeIcon from '@mui/icons-material/Code';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import { useState } from 'react';
+import ProjectsSection from './ProjectsSection';
+import SkillsSection from './SkillsSection';
+import ProfileCard from './Cards/ProfileCard';
+import IntroCard from './Cards/IntroCard';
+import Mainfooter from './Footer/mainfooter';
+import { Container, SpeedDial } from '@mui/material';
+
+import Contact from './Cards/contact';
+import HireMePage from './Cards/hireme';
 
 const drawerWidth = 280;
 
@@ -28,11 +38,11 @@ export default function PermanentDrawerLeft() {
   ];
 
   const socialItems = [
-    { text: 'LinkedIn', icon: <LinkedInIcon />, url:'https://www.linkedin.com/iamanubhav7/'  },
+    { text: 'LinkedIn', icon: <LinkedInIcon />, url:'https://www.linkedin.com/in/iamanubhav7/'  },
     { text: 'GitHub', icon: <GitHubIcon /> ,url:'https://github.com/hrxdavidmac7' },
-    { text: 'YouTube', icon: <YouTubeIcon />, url:'https://www.google.com'  },
-    { text: 'LeetCode', icon: <CodeIcon /> , url:'https://www.google.com' },
-    { text: 'Telegram', icon: <TelegramIcon />,url:'https://www.google.com'  }
+    { text: 'YouTube', icon: <YouTubeIcon />, url:'https://www.youtube.com/channel/UCRgqzKU2mgrDjj7GoGs3DdA'  },
+    { text: 'LeetCode', icon: <CodeIcon /> , url:'https://leetcode.com/anubhav-7/' },
+    { text: 'Telegram', icon: <TelegramIcon />,url:'https://t.me/hrxdavidmac'  }
   ];
 
   return (
@@ -62,7 +72,7 @@ export default function PermanentDrawerLeft() {
               {menuItems.map((item, index) => (
                 <React.Fragment key={item.text}>
                   <ListItem disablePadding>
-                  <a href={item.url} style={{ textDecoration: 'none', color: 'inherit', width:'100%' }}>
+                  <a href={item.url}  style={{ textDecoration: 'none', color: 'inherit', width:'100%' }}>
                     <ListItemButton>
                       <ListItemIcon>
                         {item.icon}
@@ -76,8 +86,8 @@ export default function PermanentDrawerLeft() {
               ))}
             </List>
             <Divider />
-            <Typography variant="subtitle2" gutterBottom sx={{ mt: 2, ml: 2 }}>
-              <h3>Social</h3>
+            <Typography  gutterBottom sx={{ mt: 2, ml: 2, fontSize:18, fontWeight:600,color: '#424242' }}>
+              Social
             </Typography>
             <List>
               {socialItems.map((item, index) => (
@@ -96,9 +106,28 @@ export default function PermanentDrawerLeft() {
                 </React.Fragment>
               ))}
             </List>
+           
+          
           </Drawer>
+         
         </div>
       </div>
+      
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
