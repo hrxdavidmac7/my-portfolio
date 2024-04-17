@@ -16,7 +16,7 @@ function App() {
       <Header />
       <div className="portfolio-content">
         <LeftSection />
-        <RightSection/>
+        
       </div>
       
     </div>

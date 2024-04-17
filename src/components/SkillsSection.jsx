@@ -45,6 +45,7 @@ const SkillsSection = () => {
       <Chip
         icon={icon}
         label={name}
+        key={name}
         variant="outlined"
         sx={{ margin: 0.5 }}
       />

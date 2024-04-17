@@ -11,7 +11,7 @@ const Header = () => {
       <ul className="nav-list">
         <li><a href="#projects">Projects</a></li>
         <li><a href="https://drive.google.com/file/d/1I6ZZ3H50oy61vabeFpwPtUl7VaWbkBYs/view" target='blank'>Resume</a></li>
-        <li><a href="#me">Hire me</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div className="hamburger-menu">
         <span></span>

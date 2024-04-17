@@ -13,9 +13,9 @@ function IntroCard() {
      <section className="home bd-grid" id="home" >
     <div className="home__data" >
         <motion.h1 
-          initial={{ opacity: 0, y: 50 }} // Initial animation state
-          animate={{ opacity: 1, y: 0 }} // Animation when component mounts
-          transition={{ duration: 0.6 }} // Animation duration
+          initial={{ opacity: 0, y: 50 }} 
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }} 
           className="home__title " 
           style={{ marginTop: '0' }}
         >
@@ -38,9 +38,10 @@ function IntroCard() {
     </div>
 
     <div className="home__social" >
-        <a href="" className="home__social-icon"><i className='bx bxl-linkedin'></i></a>
+     
+        {/* <a href="" className="home__social-icon"><i className='bx bxl-linkedin'></i></a>
         <a href="" className="home__social-icon"><i className='bx bxl-behance' ></i></a>
-        <a href="" className="home__social-icon"><i className='bx bxl-github' ></i></a>
+        <a href="" className="home__social-icon"><i className='bx bxl-github' ></i></a> */}
     </div>
 
     <div className="home__img">

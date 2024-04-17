@@ -14,7 +14,6 @@ const Contact = () => {
    
    
   }
- 
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -24,7 +23,7 @@ const Contact = () => {
     setOpen(false);
   };
   return (
-    <motion.div
+    <motion.div id='contact'
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -49,7 +48,7 @@ const Contact = () => {
               margin="normal"
               variant="outlined"
               color="success"
-              required="true"
+              required={true}
               InputProps={{ style: { background: '#fff' } }}
             />
             <TextField
@@ -60,7 +59,7 @@ const Contact = () => {
               margin="normal"
               variant="outlined"
               color="success"
-              required="true"
+              required={true}
               InputProps={{ style: { background: '#fff' } }}
             />
             <TextField
@@ -72,7 +71,7 @@ const Contact = () => {
               color="success"
               multiline
               rows={4}
-              required="true"
+              required={true}
               InputProps={{ style: { background: '#fff' } }}
               
             />
